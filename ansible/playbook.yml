@@ -6,7 +6,7 @@ tasks:
   tasks:
     - name: Copy WAR file to Tomcat
       copy:
-        src: "/home/unified/.m2/repository/com/example/mavansi/1.0-SNAPSHOT/mavansi-1.0-SNAPSHOT.war"
+        src: "src: "/var/lib/jenkins/workspace/mavansi/target/mavansi.war"
         dest: "/opt/tomcat/webapps/mavansi.war"
         remote_src: no
 
