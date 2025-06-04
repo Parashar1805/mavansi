@@ -2,15 +2,14 @@
   hosts: web
   become: yes
 
-tasks:
   tasks:
     - name: Copy WAR file to Tomcat
       copy:
-        src: "src: "/var/lib/jenkins/workspace/mavansi/target/mavansi.war"
-        dest: "/opt/tomcat/webapps/mavansi.war"
+        src: /var/lib/jenkins/workspace/mavansi/target/mavansi.war
+        dest: /opt/tomcat/webapps/mavansi.war
         remote_src: no
 
-  - name: Restart Tomcat
-    service:
-      name: tomcat
-      state: restarted
+    - name: Restart Tomcat
+      service:
+        name: tomcat
+        state: restarted
