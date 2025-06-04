@@ -6,7 +6,7 @@ tasks:
   tasks:
     - name: Copy WAR file to Tomcat
       copy:
-        src: "/var/snap/jenkins/4865/workspace/MavenAnsible-CICD/mavansi.war"
+        src: "/home/unified/.m2/repository/com/example/mavansi/1.0-SNAPSHOT/mavansi-1.0-SNAPSHOT.war"
         dest: "/opt/tomcat/webapps/mavansi.war"
         remote_src: no
 
@@ -14,5 +14,3 @@ tasks:
     service:
       name: tomcat
       state: restarted
-      
-      
