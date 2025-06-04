@@ -3,11 +3,12 @@
   become: yes
 
   tasks:
-    - name: Copy WAR file to Tomcat
-      copy:
-        src: /var/lib/jenkins/workspace/mavansi/target/mavansi.war
-        dest: /opt/tomcat/webapps/mavansi.war
-        remote_src: no
+   - name: Copy WAR file to Tomcat
+    copy:
+    src: /var/lib/jenkins/workspace/mavansi/target/mavansi.war
+    dest: /opt/tomcat/webapps/mavansi.war
+    remote_src: no
+
 
     - name: Restart Tomcat
       service:
