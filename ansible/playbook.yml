@@ -9,9 +9,7 @@
         dest: "/opt/tomcat/webapps/mavansi.war"
         remote_src: no
 
-  - name: Restart Tomcat
-    service:
-      name: tomcat
-      state: restarted
-      
-      
+    - name: Restart Tomcat
+      service:
+        name: tomcat
+        state: restarted
